@@ -5,9 +5,9 @@ import sys
 
 def main(recommendTitle):
     result=[]
-    cosine_sim = np.load("/home/ec2-user/Server/recommend/cosine_sim_id.npy")
-    indices = pd.read_pickle('/home/ec2-user/Server/recommend/indices_id.pkl')
-    df = pd.read_csv('/home/ec2-user/Server/recommend/travel.csv', low_memory=False, encoding='utf-8')
+    cosine_sim = np.load("/cosine_sim_id.npy")
+    indices = pd.read_pickle('/indices_id.pkl')
+    df = pd.read_csv('/travel.csv', low_memory=False, encoding='utf-8')
 
     title = int(recommendTitle[1])
     idx = indices[title]
